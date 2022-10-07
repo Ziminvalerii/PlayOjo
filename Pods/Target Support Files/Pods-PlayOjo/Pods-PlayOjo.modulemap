@@ -1,0 +1,6 @@
+framework module Pods_PlayOjo {
+  umbrella header "Pods-PlayOjo-umbrella.h"
+
+  export *
+  module * { export * }
+}

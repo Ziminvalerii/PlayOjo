@@ -1,0 +1,6 @@
+framework module Pods_PlayOjoTests {
+  umbrella header "Pods-PlayOjoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
