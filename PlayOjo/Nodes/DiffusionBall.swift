@@ -27,12 +27,12 @@ class DiffusionBall: SKSpriteNode {
     }
     
     func applyDiffusion() {
-        let resizing = [SKAction.resize(toWidth: 160, height: 160, duration: 1.0),
-                        SKAction.resize(toWidth: 180, height: 160, duration: 1.0),
-                        SKAction.resize(toWidth: 160, height: 180, duration: 1.0),
-                        SKAction.resize(toWidth: 160, height: 160, duration: 1.0),
-                        SKAction.resize(toWidth: 220, height: 160, duration: 1.0),
-                        SKAction.resize(toWidth: 160, height: 220, duration: 1.0),
+        let resizing = [SKAction.resize(toWidth: 100, height: 100, duration: 1.5),
+                        SKAction.resize(toWidth: 120, height: 100, duration: 1.5),
+                        SKAction.resize(toWidth: 100, height: 120, duration: 1.5),
+                        SKAction.resize(toWidth: 100, height: 100, duration: 1.5),
+                        SKAction.resize(toWidth: 160, height: 100, duration: 1.5),
+                        SKAction.resize(toWidth: 100, height: 160, duration: 1.5),
         ]
         var action = [SKAction]()
         action.append(resizing[random(to: resizing.count-1)])

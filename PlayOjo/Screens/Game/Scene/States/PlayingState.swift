@@ -13,8 +13,9 @@ class PlayingState: GKState {
     var undoButton: UndoButton!
     lazy var replayButton = ReplayButtonNode()
     lazy var menuButton = MenuButtonNode()
-    lazy var lavelLabel = createlevelLabel()
+    lazy var lavelLabel = LevelLabel(custom: true)
     lazy var coinsLabel = CoinsLabel()
+    lazy var backButton = BackButton()
     
     
     init(gameSceneManager: GameSceneManager) {
@@ -37,19 +38,22 @@ class PlayingState: GKState {
         }
         undoButton.position = CGPoint(x: scene.size.width/2 - undoButton.size.width/2 - 16, y: scene.size.height/2 - undoButton.size.height/2 - 48)
         replayButton.position = CGPoint(x: undoButton.frame.minX - 32, y: undoButton.position.y)
-        menuButton.position = CGPoint(x: -scene.size.width/2 + menuButton.size.width/2 + 16, y: undoButton.position.y)
+        backButton.position = CGPoint(x: -scene.size.width/2 + backButton.size.width/2 + 16, y: undoButton.position.y)
+        menuButton.position = CGPoint(x: backButton.position.x + backButton.size.width/2 + menuButton.size.width/2 + 8, y: undoButton.position.y)
         lavelLabel.position = CGPoint(x: 0, y: scene.size.height/2 - lavelLabel.frame.size.height/2 - 120)
         coinsLabel.position = CGPoint(x: 0, y: lavelLabel.frame.minY - 24 /* coinsLabel.size.width/2*/)
-        setText()
+        lavelLabel.setText()
         undoButton.freeUndoActions = 2
         gameSceneManager.toucheble.append(undoButton)
         gameSceneManager.toucheble.append(replayButton)
         gameSceneManager.toucheble.append(menuButton)
+        gameSceneManager.toucheble.append(backButton)
         scene.addChild(undoButton)
         scene.addChild(replayButton)
         scene.addChild(menuButton)
         scene.addChild(lavelLabel)
         scene.addChild(coinsLabel)
+        scene.addChild(backButton)
     }
 
     
@@ -84,9 +88,6 @@ extension PlayingState {
         return label
     }
     
-    func setText() {
-        let text = NSAttributedString(string: "Level \(UserDefaultsValues.levelIndex+1)", attributes: [.font : UIFont(name: "Arial Rounded MT Bold", size: 32)!, .foregroundColor: UIColor.green])
-        lavelLabel.attributedText = text
-    }
+   
 }
 

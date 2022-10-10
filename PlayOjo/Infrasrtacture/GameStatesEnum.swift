@@ -15,4 +15,5 @@ enum GameStates {
     case gameOver
     case checkGameOver
     case goToInstruction
+    case back
 }

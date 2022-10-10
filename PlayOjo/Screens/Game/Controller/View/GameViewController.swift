@@ -17,15 +17,13 @@ class GameViewController: BaseViewController<GamePresenterProtocol>, GameViewPro
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setCustomBackButton()
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
             if let scene = SKScene(fileNamed: "GameScene") as? GameScene {
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
                 scene.parentVC =  self
-                
-                // Present the scene
                 view.presentScene(scene)
             }
             self.navigationController?.navigationBar.isHidden = true
@@ -34,8 +32,14 @@ class GameViewController: BaseViewController<GamePresenterProtocol>, GameViewPro
 //            view.showsNodeCount = true
 //            view.showsPhysics = true
         }
-        
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let view = self.view as! SKView? {
+            view.scene?.isPaused = false
+        }
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     func showMenuView() {
         presenter.goToSettings()
@@ -71,9 +75,11 @@ class GameViewController: BaseViewController<GamePresenterProtocol>, GameViewPro
     }
     
     func showRewardedAd(completion: @escaping()->Void) {
+        stopPlaying()
         presenter.adManager.showRewardedAds(at: self) { reward in
             if reward != nil {
                 completion()
+                playBackgroundMusic()
             }
         }
     }
@@ -92,6 +98,14 @@ class GameViewController: BaseViewController<GamePresenterProtocol>, GameViewPro
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
    
 }

@@ -18,10 +18,7 @@ class UndoButton: SKSpriteNode {
             if freeUndoActions <= 0 {
                 setUpWatchAdd()
             } else {
-                // if label.parent == nil {
                 setUpForActions()
-                // }
-                //  setText(text: freeUndoActions.description)
             }
         }
     }
@@ -40,20 +37,17 @@ class UndoButton: SKSpriteNode {
         let text = NSAttributedString(string: "2", attributes: [.font : UIFont(name: "Arial", size: 16)!, .foregroundColor: UIColor.white])
         var label = SKLabelNode(attributedText: text)
         label.numberOfLines = 6
-        label.zPosition = 21
+      //  label.zPosition = 8
         label.name = "undo  label node"
         return label
     }()
-    //
     var icon: SKSpriteNode = {
         let node = SKSpriteNode(imageNamed: "undoIcon")
         node.size = CGSize(width: 20, height: 20)
-        node.zPosition = 21
+    //    node.zPosition = 8
         node.name = "undo icon node"
         return node
     }()
-    
-    var forCoins: Bool = true
     
     convenience init(levelFactory: LevelFactory) {
         self.init(imageNamed: "iconButtonTexture")
@@ -73,7 +67,7 @@ class UndoButton: SKSpriteNode {
     }
     
     func setUpWatchAdd() {
-        if forCoins && UserDefaultsValues.coinsCount > 50 {
+        if UserDefaultsValues.coinsCount >= 50 {
             icon.texture = forCoinsTexture
             setText(text: "50")
         } else {
@@ -116,7 +110,6 @@ extension UndoButton: ButtonType {
                     self.freeUndoActions += 2
                 })
             } else if icon.texture == forCoinsTexture {
-                forCoins = false
                 UserDefaultsValues.coinsCount -= 50
                 if let coinLabel = scene.childNode(withName: "coins node") as? CoinsLabel {
                     coinLabel.setText()

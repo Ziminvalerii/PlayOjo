@@ -27,14 +27,14 @@ class BottleNode: SKSpriteNode {
     lazy var fallSound = SKAction.playSoundFileNamed("fall.wav", waitForCompletion: false)
     lazy var foregrounNode: SKSpriteNode = {
         let node = SKSpriteNode(imageNamed: "bottleTexture1")
-        node.size = CGSize(width: 65, height: 220)
+        node.size = CGSize(width: 50, height: 200)
         node.zPosition = 6
         node.alpha = 1
         return node
     }()
     convenience init(levelFactory: LevelFactory) {
         self.init(imageNamed: "bottleTexture1")
-        self.size = CGSize(width: 65, height: 220)
+        self.size = CGSize(width: 50, height: 200)
         self.zPosition = 4
         self.alpha = 1
         self.name = "bottle"

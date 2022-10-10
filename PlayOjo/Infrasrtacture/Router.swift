@@ -35,10 +35,9 @@ class Router: RouterProtocol {
     
     func goToGame() {
         let vc = builder.resolveGameViewController(router: self)
-        let navVC = NavigationController(rootViewController: vc)
-        navVC.modalPresentationStyle = .fullScreen
-        navigationController.present(navVC, animated: true)
-        self.navigationController = navVC
+      //  let navVC = NavigationController(rootViewController: vc)
+        self.navigationController.pushViewController(vc, animated: true)
+      //  self.navigationController = navVC
     }
     
     func goToInstruction() {

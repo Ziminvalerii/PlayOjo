@@ -23,7 +23,7 @@ class WinOverlay: SKSpriteNode {
     
     convenience init(scenesize: CGSize) {
         self.init(color: UIColor(red: 0, green: 0, blue: 0, alpha: 0.4), size: scenesize)
-        self.zPosition = 10.0
+        self.zPosition = 13.0
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         nextButton.position = CGPoint(x: 0, y: -scenesize.height/2 + nextButton.size.height/2 + 64)
         self.addChild(titleLabel)

@@ -13,6 +13,7 @@ extension StartScene {
         node.size = self.size
         node.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         node.zPosition = 1.0
+       
         if let parentVC = parentVC as? StartViewController {
         if parentVC.type == .start {
             configureButtons(node: node)
@@ -20,17 +21,26 @@ extension StartScene {
         }
         self.run(SKAction.repeat(SKAction.run(createEndlessBubles), count: 10))
         playButton.animate()
-        instruction.animate()
+        //instruction.animate()
         return node
     }
     
     func configureButtons(node: SKNode) {
-        playButton.position = CGPoint(x: 0, y: 100)
-        instruction.position = CGPoint(x: 0, y: -100)
+        instruction.position = CGPoint(x: -self.size.width/2 + instruction.size.width/2 + 16, y: self.size.height/2 - instruction.size.height/2 - 32)
+        settingsButton.position = CGPoint(x: self.size.width/2 - settingsButton.size.width/2 - 16, y: instruction.position.y)
+        coinsLabel.position = CGPoint(x: 0, y: instruction.position.y)
+        levelLabel.position = CGPoint(x: 0, y: coinsLabel.position.y - 64)
+        coinsLabel.setSize(size: 32)
         touchable.append(playButton)
         touchable.append(instruction)
-        node.addChild(playButton)
-        node.addChild(instruction)
+        touchable.append(settingsButton)
+        self.addChild(playButton)
+        self.addChild(instruction)
+        self.addChild(settingsButton)
+        self.addChild(coinsLabel)
+        self.addChild(levelLabel)
+        coinsLabel.animateLabel(sceneSize: self.size, to: CGPoint(x: 0, y: instruction.position.y - 64))
+        levelLabel.animateLabel(sceneSize: self.size, to: CGPoint(x: 0, y: coinsLabel.position.y - 64))
     }
     
     func createEndlessBubles() {
@@ -39,9 +49,13 @@ extension StartScene {
         node.position = CGPoint(x: randomX, y: 0/*self.size.height/2*/)
         node.applyDiffusion()
         self.addChild(node)
-        let randX = CGFloat.random(in: -10.0...10.0)
-        let randY = CGFloat.random(in: -10.0...10.0)
+        let randX = CGFloat.random(in: -5...5)
+        let randY = CGFloat.random(in: -5...5)
         node.physicsBody!.applyImpulse(CGVector(dx: randX, dy: randY))
+    }
+    
+    func setText() {
+        levelLabel.setText()
     }
     
     func setPhysicWorld() {

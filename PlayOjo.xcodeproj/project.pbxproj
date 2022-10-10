@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D844EB62FE6AD571B2AB709 /* Pods_PlayOjo_PlayOjoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074A1D4220EFB1A245BA6549 /* Pods_PlayOjo_PlayOjoUITests.framework */; };
-		6EC784A4B0BD90F140164D84 /* Pods_PlayOjoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219D9E86C9DD67684036A268 /* Pods_PlayOjoTests.framework */; };
-		B823DFCBA189C2386A77B91C /* Pods_PlayOjo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C518564EB57FA3638BC0FA /* Pods_PlayOjo.framework */; };
+		332C99973FFEDDC8D25AEFE3 /* Pods_PlayOjoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D2FDA465029D60007654B03 /* Pods_PlayOjoTests.framework */; };
+		9BD5AB86E61CA3D826B73F96 /* Pods_PlayOjo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9438F92E01AA2A473EBD1F11 /* Pods_PlayOjo.framework */; };
+		B338E44F81ECD8FDCAD91CA9 /* Pods_PlayOjo_PlayOjoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B74D1D8D141946938C7BF4 /* Pods_PlayOjo_PlayOjoUITests.framework */; };
 		D105224328EC2041007D7A24 /* collect.wav in Resources */ = {isa = PBXBuildFile; fileRef = D105224228EC2041007D7A24 /* collect.wav */; };
 		D105224528EC2258007D7A24 /* fall.wav in Resources */ = {isa = PBXBuildFile; fileRef = D105224428EC2258007D7A24 /* fall.wav */; };
 		D105224728EC453B007D7A24 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D105224628EC453B007D7A24 /* AdManager.swift */; };
@@ -39,6 +39,9 @@
 		D14072E328E97E7E006C504D /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14072E128E97E7E006C504D /* PurchaseManager.swift */; };
 		D14072E528E9A523006C504D /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D14072E428E9A523006C504D /* background.mp3 */; };
 		D14072E728E9A540006C504D /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14072E628E9A540006C504D /* MusicManager.swift */; };
+		D159CC1F28F0B65E00FA6A56 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D159CC1E28F0B65E00FA6A56 /* BackButton.swift */; };
+		D159CC2128F0D83B00FA6A56 /* InstructionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D159CC2028F0D83B00FA6A56 /* InstructionButton.swift */; };
+		D159CC2328F0DDF500FA6A56 /* BrightnessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D159CC2228F0DDF500FA6A56 /* BrightnessTableViewCell.swift */; };
 		D171ADBB28E6E4EE0099974F /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171ADBA28E6E4EE0099974F /* MenuView.swift */; };
 		D17B2E3828E70AA800F7C331 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D17B2E3628E70AA800F7C331 /* Assets.xcassets */; };
 		D1B288AA28EDD40E0087988F /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B288A928EDD40E0087988F /* Array.swift */; };
@@ -75,6 +78,10 @@
 		D1EAED1828E4346900DF17AC /* StartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D1EAED1728E4346900DF17AC /* StartScene.sks */; };
 		D1EAED1A28E4349E00DF17AC /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EAED1928E4349E00DF17AC /* StartScene.swift */; };
 		D1EDA5A928EEBC3200D4D569 /* DiffusionBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDA5A828EEBC3100D4D569 /* DiffusionBall.swift */; };
+		D1FB257628F0E2F3001D3864 /* StartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FB257528F0E2F3001D3864 /* StartPresenter.swift */; };
+		D1FB257928F0E4C8001D3864 /* StartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FB257828F0E4C8001D3864 /* StartModel.swift */; };
+		D1FB257B28F303E0001D3864 /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FB257A28F303E0001D3864 /* Range.swift */; };
+		D1FB257D28F33109001D3864 /* LevelLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FB257C28F33109001D3864 /* LevelLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,14 +102,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		074A1D4220EFB1A245BA6549 /* Pods_PlayOjo_PlayOjoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayOjo_PlayOjoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B8668094EBA03A98E6D84D6 /* Pods-PlayOjo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayOjo.debug.xcconfig"; path = "Target Support Files/Pods-PlayOjo/Pods-PlayOjo.debug.xcconfig"; sourceTree = "<group>"; };
-		219D9E86C9DD67684036A268 /* Pods_PlayOjoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayOjoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		31DB7A09FFE4FEB17B286316 /* Pods-PlayOjo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayOjo.release.xcconfig"; path = "Target Support Files/Pods-PlayOjo/Pods-PlayOjo.release.xcconfig"; sourceTree = "<group>"; };
-		42C518564EB57FA3638BC0FA /* Pods_PlayOjo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayOjo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6ABBF133A5EC4B9406BFF294 /* Pods-PlayOjoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayOjoTests.release.xcconfig"; path = "Target Support Files/Pods-PlayOjoTests/Pods-PlayOjoTests.release.xcconfig"; sourceTree = "<group>"; };
-		9D8FCDC19412AD698CC0877C /* Pods-PlayOjoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayOjoTests.debug.xcconfig"; path = "Target Support Files/Pods-PlayOjoTests/Pods-PlayOjoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A2053DB4E5FF8E65521EDC0B /* Pods-PlayOjo-PlayOjoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayOjo-PlayOjoUITests.release.xcconfig"; path = "Target Support Files/Pods-PlayOjo-PlayOjoUITests/Pods-PlayOjo-PlayOjoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0629BC23E2538DDC1150FF47 /* Pods-PlayOjo-PlayOjoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayOjo-PlayOjoUITests.release.xcconfig"; path = "Target Support Files/Pods-PlayOjo-PlayOjoUITests/Pods-PlayOjo-PlayOjoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0AF4CF4860520CA14E1A65C1 /* Pods-PlayOjoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayOjoTests.release.xcconfig"; path = "Target Support Files/Pods-PlayOjoTests/Pods-PlayOjoTests.release.xcconfig"; sourceTree = "<group>"; };
+		2D2FDA465029D60007654B03 /* Pods_PlayOjoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayOjoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54B74D1D8D141946938C7BF4 /* Pods_PlayOjo_PlayOjoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayOjo_PlayOjoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9438F92E01AA2A473EBD1F11 /* Pods_PlayOjo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayOjo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99BB2270E75AABCC4234BC66 /* Pods-PlayOjo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayOjo.debug.xcconfig"; path = "Target Support Files/Pods-PlayOjo/Pods-PlayOjo.debug.xcconfig"; sourceTree = "<group>"; };
+		A86574BBE5C6F649C066183E /* Pods-PlayOjoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayOjoTests.debug.xcconfig"; path = "Target Support Files/Pods-PlayOjoTests/Pods-PlayOjoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AAB3D98B14AB78DDF35B1D63 /* Pods-PlayOjo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayOjo.release.xcconfig"; path = "Target Support Files/Pods-PlayOjo/Pods-PlayOjo.release.xcconfig"; sourceTree = "<group>"; };
 		D105224228EC2041007D7A24 /* collect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = collect.wav; sourceTree = "<group>"; };
 		D105224428EC2258007D7A24 /* fall.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fall.wav; sourceTree = "<group>"; };
 		D105224628EC453B007D7A24 /* AdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
@@ -134,6 +141,9 @@
 		D14072E128E97E7E006C504D /* PurchaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
 		D14072E428E9A523006C504D /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		D14072E628E9A540006C504D /* MusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
+		D159CC1E28F0B65E00FA6A56 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		D159CC2028F0D83B00FA6A56 /* InstructionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionButton.swift; sourceTree = "<group>"; };
+		D159CC2228F0DDF500FA6A56 /* BrightnessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessTableViewCell.swift; sourceTree = "<group>"; };
 		D171ADBA28E6E4EE0099974F /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		D17B2E3628E70AA800F7C331 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1B288A928EDD40E0087988F /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
@@ -173,7 +183,11 @@
 		D1EAED1728E4346900DF17AC /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
 		D1EAED1928E4349E00DF17AC /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
 		D1EDA5A828EEBC3100D4D569 /* DiffusionBall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffusionBall.swift; sourceTree = "<group>"; };
-		F87365BC55449CB1F759953B /* Pods-PlayOjo-PlayOjoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayOjo-PlayOjoUITests.debug.xcconfig"; path = "Target Support Files/Pods-PlayOjo-PlayOjoUITests/Pods-PlayOjo-PlayOjoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D1FB257528F0E2F3001D3864 /* StartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPresenter.swift; sourceTree = "<group>"; };
+		D1FB257828F0E4C8001D3864 /* StartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartModel.swift; sourceTree = "<group>"; };
+		D1FB257A28F303E0001D3864 /* Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Range.swift; sourceTree = "<group>"; };
+		D1FB257C28F33109001D3864 /* LevelLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelLabel.swift; sourceTree = "<group>"; };
+		DC85B7AD77CA455B85DAE543 /* Pods-PlayOjo-PlayOjoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayOjo-PlayOjoUITests.debug.xcconfig"; path = "Target Support Files/Pods-PlayOjo-PlayOjoUITests/Pods-PlayOjo-PlayOjoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B823DFCBA189C2386A77B91C /* Pods_PlayOjo.framework in Frameworks */,
+				9BD5AB86E61CA3D826B73F96 /* Pods_PlayOjo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,7 +203,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EC784A4B0BD90F140164D84 /* Pods_PlayOjoTests.framework in Frameworks */,
+				332C99973FFEDDC8D25AEFE3 /* Pods_PlayOjoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,19 +211,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D844EB62FE6AD571B2AB709 /* Pods_PlayOjo_PlayOjoUITests.framework in Frameworks */,
+				B338E44F81ECD8FDCAD91CA9 /* Pods_PlayOjo_PlayOjoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A792080E0630F52E2380F61C /* Frameworks */ = {
+		334C42095EF5004A3EC7A37E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				42C518564EB57FA3638BC0FA /* Pods_PlayOjo.framework */,
-				074A1D4220EFB1A245BA6549 /* Pods_PlayOjo_PlayOjoUITests.framework */,
-				219D9E86C9DD67684036A268 /* Pods_PlayOjoTests.framework */,
+				9438F92E01AA2A473EBD1F11 /* Pods_PlayOjo.framework */,
+				54B74D1D8D141946938C7BF4 /* Pods_PlayOjo_PlayOjoUITests.framework */,
+				2D2FDA465029D60007654B03 /* Pods_PlayOjoTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -243,6 +257,8 @@
 				D128B6DB28E623FF000B99C7 /* UndoButton.swift */,
 				D128B6F028E6CF3B000B99C7 /* ReplayButtonNode.swift */,
 				D128B6F228E6D2DB000B99C7 /* MenuButtonNode.swift */,
+				D159CC1E28F0B65E00FA6A56 /* BackButton.swift */,
+				D159CC2028F0D83B00FA6A56 /* InstructionButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -325,6 +341,23 @@
 			path = IAP;
 			sourceTree = "<group>";
 		};
+		D159CC2428F0DDFF00FA6A56 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D1EAED1528E433FF00DF17AC /* StartViewController.swift */,
+				D159CC2228F0DDF500FA6A56 /* BrightnessTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D159CC2528F0DE0900FA6A56 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D1FB257528F0E2F3001D3864 /* StartPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		D1C5FE3E28EFF9D200888AB3 /* Instruction */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +389,7 @@
 				D128B6F428E6D2DE000B99C7 /* Buttons */,
 				D128B6D528E59CAB000B99C7 /* BottleNode.swift */,
 				D1EDA5A828EEBC3100D4D569 /* DiffusionBall.swift */,
+				D1FB257C28F33109001D3864 /* LevelLabel.swift */,
 				D1C5FE4A28F04A2600888AB3 /* CoinsLabel.swift */,
 				D128B6D928E5BD15000B99C7 /* BubleNode.swift */,
 				D13C586928EDF443003FFDE0 /* OverlayNode.swift */,
@@ -372,7 +406,7 @@
 				D1EAECE328E42E6100DF17AC /* PlayOjoUITests */,
 				D1EAECBE28E42E5F00DF17AC /* Products */,
 				EFD4E559F810A40E102DABB3 /* Pods */,
-				A792080E0630F52E2380F61C /* Frameworks */,
+				334C42095EF5004A3EC7A37E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -508,6 +542,7 @@
 				D1B288A928EDD40E0087988F /* Array.swift */,
 				D13C586D28EE0336003FFDE0 /* SKSpriteNode.swift */,
 				D1E8609728EF1F9C00662567 /* SKLabelNode.swift */,
+				D1FB257A28F303E0001D3864 /* Range.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -549,7 +584,9 @@
 		D1EAED1328E433D800DF17AC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D1EAED1528E433FF00DF17AC /* StartViewController.swift */,
+				D159CC2428F0DDFF00FA6A56 /* View */,
+				D159CC2528F0DE0900FA6A56 /* Presenter */,
+				D1FB257728F0E4AB001D3864 /* Model */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -564,15 +601,23 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
+		D1FB257728F0E4AB001D3864 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D1FB257828F0E4C8001D3864 /* StartModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EFD4E559F810A40E102DABB3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1B8668094EBA03A98E6D84D6 /* Pods-PlayOjo.debug.xcconfig */,
-				31DB7A09FFE4FEB17B286316 /* Pods-PlayOjo.release.xcconfig */,
-				F87365BC55449CB1F759953B /* Pods-PlayOjo-PlayOjoUITests.debug.xcconfig */,
-				A2053DB4E5FF8E65521EDC0B /* Pods-PlayOjo-PlayOjoUITests.release.xcconfig */,
-				9D8FCDC19412AD698CC0877C /* Pods-PlayOjoTests.debug.xcconfig */,
-				6ABBF133A5EC4B9406BFF294 /* Pods-PlayOjoTests.release.xcconfig */,
+				99BB2270E75AABCC4234BC66 /* Pods-PlayOjo.debug.xcconfig */,
+				AAB3D98B14AB78DDF35B1D63 /* Pods-PlayOjo.release.xcconfig */,
+				DC85B7AD77CA455B85DAE543 /* Pods-PlayOjo-PlayOjoUITests.debug.xcconfig */,
+				0629BC23E2538DDC1150FF47 /* Pods-PlayOjo-PlayOjoUITests.release.xcconfig */,
+				A86574BBE5C6F649C066183E /* Pods-PlayOjoTests.debug.xcconfig */,
+				0AF4CF4860520CA14E1A65C1 /* Pods-PlayOjoTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -584,11 +629,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1EAECEA28E42E6100DF17AC /* Build configuration list for PBXNativeTarget "PlayOjo" */;
 			buildPhases = (
-				A1EC41E06B3F823D40FD17FB /* [CP] Check Pods Manifest.lock */,
+				FD62A8409907F868C81CA714 /* [CP] Check Pods Manifest.lock */,
 				D1EAECB928E42E5F00DF17AC /* Sources */,
 				D1EAECBA28E42E5F00DF17AC /* Frameworks */,
 				D1EAECBB28E42E5F00DF17AC /* Resources */,
-				6D03FC96306D1D1C2A5EEB16 /* [CP] Embed Pods Frameworks */,
+				E24689BF0E4634361D4A1B50 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -603,7 +648,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1EAECED28E42E6100DF17AC /* Build configuration list for PBXNativeTarget "PlayOjoTests" */;
 			buildPhases = (
-				3CDCF1B03C81067651B1DA27 /* [CP] Check Pods Manifest.lock */,
+				2A4663140A5010131D8318AF /* [CP] Check Pods Manifest.lock */,
 				D1EAECD228E42E6100DF17AC /* Sources */,
 				D1EAECD328E42E6100DF17AC /* Frameworks */,
 				D1EAECD428E42E6100DF17AC /* Resources */,
@@ -622,11 +667,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1EAECF028E42E6100DF17AC /* Build configuration list for PBXNativeTarget "PlayOjoUITests" */;
 			buildPhases = (
-				8103B6D9D2ECAED7D59984C5 /* [CP] Check Pods Manifest.lock */,
+				4972AFBFC22CDC8A88CDA0DD /* [CP] Check Pods Manifest.lock */,
 				D1EAECDC28E42E6100DF17AC /* Sources */,
 				D1EAECDD28E42E6100DF17AC /* Frameworks */,
 				D1EAECDE28E42E6100DF17AC /* Resources */,
-				BA8E9F852E7562ACAB2513E0 /* [CP] Embed Pods Frameworks */,
+				05DD3FA942619F1BDC954C6D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -720,7 +765,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3CDCF1B03C81067651B1DA27 /* [CP] Check Pods Manifest.lock */ = {
+		05DD3FA942619F1BDC954C6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PlayOjo-PlayOjoUITests/Pods-PlayOjo-PlayOjoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PlayOjo-PlayOjoUITests/Pods-PlayOjo-PlayOjoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlayOjo-PlayOjoUITests/Pods-PlayOjo-PlayOjoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A4663140A5010131D8318AF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -742,24 +804,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6D03FC96306D1D1C2A5EEB16 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PlayOjo/Pods-PlayOjo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PlayOjo/Pods-PlayOjo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlayOjo/Pods-PlayOjo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8103B6D9D2ECAED7D59984C5 /* [CP] Check Pods Manifest.lock */ = {
+		4972AFBFC22CDC8A88CDA0DD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -781,7 +826,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A1EC41E06B3F823D40FD17FB /* [CP] Check Pods Manifest.lock */ = {
+		E24689BF0E4634361D4A1B50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PlayOjo/Pods-PlayOjo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PlayOjo/Pods-PlayOjo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlayOjo/Pods-PlayOjo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD62A8409907F868C81CA714 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -803,23 +865,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BA8E9F852E7562ACAB2513E0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PlayOjo-PlayOjoUITests/Pods-PlayOjo-PlayOjoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PlayOjo-PlayOjoUITests/Pods-PlayOjo-PlayOjoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlayOjo-PlayOjoUITests/Pods-PlayOjo-PlayOjoUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -831,6 +876,7 @@
 				D1EAED0728E42F7300DF17AC /* Router.swift in Sources */,
 				D1EAED1628E433FF00DF17AC /* StartViewController.swift in Sources */,
 				D128B6DA28E5BD15000B99C7 /* BubleNode.swift in Sources */,
+				D159CC2128F0D83B00FA6A56 /* InstructionButton.swift in Sources */,
 				D1EAECC728E42E5F00DF17AC /* GameScene.swift in Sources */,
 				D128B6D828E5A146000B99C7 /* PhysicsBitMask.swift in Sources */,
 				D1EAED0528E42F7300DF17AC /* BaseSceneManager.swift in Sources */,
@@ -839,17 +885,21 @@
 				D1B288AA28EDD40E0087988F /* Array.swift in Sources */,
 				D1EAED0828E42F7300DF17AC /* GameStatesEnum.swift in Sources */,
 				D14072E328E97E7E006C504D /* PurchaseManager.swift in Sources */,
+				D1FB257628F0E2F3001D3864 /* StartPresenter.swift in Sources */,
+				D159CC1F28F0B65E00FA6A56 /* BackButton.swift in Sources */,
 				D128B6CC28E4A17C000B99C7 /* GameSceneManager.swift in Sources */,
 				D1EAED0928E42F7300DF17AC /* BaseViewController.swift in Sources */,
 				D1EAECC928E42E5F00DF17AC /* GameViewController.swift in Sources */,
 				D128B6D628E59CAB000B99C7 /* BottleNode.swift in Sources */,
 				D1EAED1128E431BE00DF17AC /* GamePresenter.swift in Sources */,
 				D1EAED0328E42F7300DF17AC /* UIViewController.swift in Sources */,
+				D1FB257B28F303E0001D3864 /* Range.swift in Sources */,
 				D128B6CF28E4A36F000B99C7 /* PlayingState.swift in Sources */,
 				D128B6F328E6D2DB000B99C7 /* MenuButtonNode.swift in Sources */,
 				D1EAECC128E42E5F00DF17AC /* AppDelegate.swift in Sources */,
 				D1EDA5A928EEBC3200D4D569 /* DiffusionBall.swift in Sources */,
 				D13C586C28EDFD6F003FFDE0 /* GameOverState.swift in Sources */,
+				D1FB257928F0E4C8001D3864 /* StartModel.swift in Sources */,
 				D1C5FE4B28F04A2600888AB3 /* CoinsLabel.swift in Sources */,
 				D14072E728E9A540006C504D /* MusicManager.swift in Sources */,
 				D14072D628E841F9006C504D /* ShopViewController.swift in Sources */,
@@ -860,6 +910,7 @@
 				D1C5FE4528EFFAD800888AB3 /* InstructionPresenter.swift in Sources */,
 				D171ADBB28E6E4EE0099974F /* MenuView.swift in Sources */,
 				D1C5FE4328EFFA9A00888AB3 /* InstructionViewController.swift in Sources */,
+				D1FB257D28F33109001D3864 /* LevelLabel.swift in Sources */,
 				D14072D828E84229006C504D /* ShopCollectionViewCell.swift in Sources */,
 				D105224728EC453B007D7A24 /* AdManager.swift in Sources */,
 				D1E8609828EF1F9C00662567 /* SKLabelNode.swift in Sources */,
@@ -867,6 +918,7 @@
 				D13C586E28EE0337003FFDE0 /* SKSpriteNode.swift in Sources */,
 				D128B6D428E5888F000B99C7 /* Levels.swift in Sources */,
 				D1C5FE4728F0256700888AB3 /* VibrationManager.swift in Sources */,
+				D159CC2328F0DDF500FA6A56 /* BrightnessTableViewCell.swift in Sources */,
 				D1EAED0D28E4309D00DF17AC /* UserDefaultValues.swift in Sources */,
 				D14072DD28E84346006C504D /* ShopModel.swift in Sources */,
 				D1D567AD28E45AA300E34D21 /* ButtonNode.swift in Sources */,
@@ -1046,7 +1098,7 @@
 		};
 		D1EAECEB28E42E6100DF17AC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B8668094EBA03A98E6D84D6 /* Pods-PlayOjo.debug.xcconfig */;
+			baseConfigurationReference = 99BB2270E75AABCC4234BC66 /* Pods-PlayOjo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1059,8 +1111,8 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1076,7 +1128,7 @@
 		};
 		D1EAECEC28E42E6100DF17AC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31DB7A09FFE4FEB17B286316 /* Pods-PlayOjo.release.xcconfig */;
+			baseConfigurationReference = AAB3D98B14AB78DDF35B1D63 /* Pods-PlayOjo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1089,8 +1141,8 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1106,7 +1158,7 @@
 		};
 		D1EAECEE28E42E6100DF17AC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D8FCDC19412AD698CC0877C /* Pods-PlayOjoTests.debug.xcconfig */;
+			baseConfigurationReference = A86574BBE5C6F649C066183E /* Pods-PlayOjoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1127,7 +1179,7 @@
 		};
 		D1EAECEF28E42E6100DF17AC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6ABBF133A5EC4B9406BFF294 /* Pods-PlayOjoTests.release.xcconfig */;
+			baseConfigurationReference = 0AF4CF4860520CA14E1A65C1 /* Pods-PlayOjoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1148,7 +1200,7 @@
 		};
 		D1EAECF128E42E6100DF17AC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F87365BC55449CB1F759953B /* Pods-PlayOjo-PlayOjoUITests.debug.xcconfig */;
+			baseConfigurationReference = DC85B7AD77CA455B85DAE543 /* Pods-PlayOjo-PlayOjoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1167,7 +1219,7 @@
 		};
 		D1EAECF228E42E6100DF17AC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2053DB4E5FF8E65521EDC0B /* Pods-PlayOjo-PlayOjoUITests.release.xcconfig */;
+			baseConfigurationReference = 0629BC23E2538DDC1150FF47 /* Pods-PlayOjo-PlayOjoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

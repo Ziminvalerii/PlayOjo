@@ -24,6 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = rootNavVC
         playBackgroundMusic()
         UserDefaultsValues.brightness = Float(UIScreen.main.brightness)
+        
+        UINavigationBar.appearance().backIndicatorImage = UIImage(named: "backButtonTexture")
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "backButtonTexture")
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: UIControl.State.highlighted)
         return true
     }
 

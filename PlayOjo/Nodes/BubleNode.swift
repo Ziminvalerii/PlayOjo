@@ -50,9 +50,13 @@ class BubleNode: SKSpriteNode {
         var actions = [SKAction]()
         scene.enumerateChildNodes(withName: "bottle") { node, error in
             if self.previousBottle != node {
-                let range = self.previousBottle!.position.x - 5 ... self.previousBottle!.position.x + 5
-                if range.contains(node.position.x) && self.previousBottle?.frame.maxY != self.currentBottle?.frame.maxY {
-               actions.append(SKAction.moveTo(x: self.previousBottle!.frame.minX - self.size.width/2, duration: 0.2))
+                let range = self.previousBottle!.position.x - self.previousBottle!.size.width ... self.previousBottle!.position.x + self.previousBottle!.size.width
+                //let nodeLeftSideRange = node.position.x - self.previousBottle!.size.width/2 ... node.position.x
+              //  let nodeRightSideRange = node.position.x ... node.position.x+self.previousBottle!.size.width/2
+             //   let predicate = (range ~= nodeLeftSideRange) || (range ~= nodeRightSideRange) //range.contains()
+                if range.contains(node.position.x) /* predicate */&& self.previousBottle?.frame.maxY != self.currentBottle?.frame.maxY {
+                    let positionX = self.previousBottle!.frame.maxY > self.currentBottle!.frame.maxY ? self.previousBottle!.frame.minX : self.currentBottle!.frame.minX
+               actions.append(SKAction.moveTo(x: positionX - self.size.width/2, duration: 0.2))
             }
             }
         }
@@ -77,9 +81,10 @@ class BubleNode: SKSpriteNode {
             actions.append(SKAction.move(to: CGPoint(x:currentBottle!.position.x, y: currentBottle!.frame.maxY + 24), duration: 0.4))
             scene.enumerateChildNodes(withName: "bottle") { node, error in
                 if self.currentBottle != node {
-                    let range = self.currentBottle!.position.x - 5 ... self.currentBottle!.position.x + 5
-                    if range.contains(node.position.x) {
-                   actions.append(SKAction.moveTo(x: self.previousBottle!.frame.minX - self.size.width/2, duration: 0.2))
+                    let range = self.currentBottle!.position.x - self.currentBottle!.size.width ... self.currentBottle!.position.x + self.currentBottle!.size.width
+                    if range.contains(node.position.x) && self.previousBottle?.frame.maxY != self.currentBottle?.frame.maxY {
+                        let positionX = self.currentBottle!.frame.maxY > self.previousBottle!.frame.maxY ? self.currentBottle!.frame.minX : self.previousBottle!.frame.minX
+                   actions.append(SKAction.moveTo(x: positionX - self.size.width/2, duration: 0.2))
                 }
                 }
             }

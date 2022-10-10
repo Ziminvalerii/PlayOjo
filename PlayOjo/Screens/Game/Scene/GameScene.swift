@@ -26,6 +26,7 @@ class GameScene: SKScene {
     }
     
     override func didMove(to view: SKView) {
+        print("moved")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -55,8 +56,12 @@ class GameScene: SKScene {
 extension GameScene: Dependable {
     func switchState(state: GameStates) {
         if state == .goToGame {
+            if stateMachine.currentState is GameOverState {
+                stateMachine.enter(PlayingState.self)
+            }
             stateMachine.enter(PlayingState.self)
         } else if state == .showMenu {
+            self.isPaused = true
             parentVC?.showMenuView()
         } else if state == .goToWin {
             stateMachine.enter(WinState.self)
@@ -67,6 +72,8 @@ extension GameScene: Dependable {
             if let state = stateMachine.currentState as? GameOverState {
                 stateMachine.enter(PlayingState.self)
             }
+        } else if state == .back {
+            parentVC?.navigationController?.popViewController(animated: true)
         }
     }
     

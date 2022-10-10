@@ -18,6 +18,9 @@ class WinState: GKState {
     override func didEnter(from previousState: GKState?) {
         guard let gameSceneManager = gameSceneManager else {return}
         guard let scene = gameSceneManager.scene else {return}
+        scene.enumerateChildNodes(withName: "bottle") { node, error in
+            node.isUserInteractionEnabled = false
+        }
         scene.addChild(winOverlay)
         gameSceneManager.toucheble.append(winOverlay.nextButton)
         gameSceneManager.updatable.append(winOverlay)
@@ -34,6 +37,9 @@ class WinState: GKState {
         
         guard let gameSceneManager = gameSceneManager else {return}
         guard let scene = gameSceneManager.scene else {return}
+        scene.enumerateChildNodes(withName: "bottle") { node, error in
+            node.isUserInteractionEnabled = true
+        }
         scene.physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
         scene.removeAllChildren()
         scene.removeAllActions()

@@ -10,11 +10,10 @@ import SpriteKit
 
 enum ControllerType {
     case start
-    //case instruction
     case settings
 }
 
-class StartViewController: UIViewController {
+class StartViewController: BaseViewController<StartPresenterProtocol>, StartViewProtocol {
     var type: ControllerType = .start
     var router: RouterProtocol!
     @IBOutlet weak var settingsView: UIView!
@@ -22,6 +21,13 @@ class StartViewController: UIViewController {
         didSet {
             sliderView.setThumbImage(UIImage(named: "thumbImage")!, for: .normal)
             sliderView.value = UserDefaultsValues.brightness
+        }
+    }
+    @IBOutlet weak var settingsTableView: UITableView! {
+        didSet {
+           
+            settingsTableView.delegate = presenter
+            settingsTableView.dataSource = presenter
         }
     }
     @IBOutlet weak var brightnessLabel: UILabel! {
@@ -37,6 +43,8 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.backButtonTitle = nil
+        setCustomBackButton()
         if let view = self.view as! SKView? {
             if let scene = SKScene(fileNamed: "StartScene") as? StartScene {
                 scene.scaleMode = .aspectFill
@@ -48,10 +56,16 @@ class StartViewController: UIViewController {
 //            view.showsFPS = true
 //            view.showsNodeCount = true
         }
-        settingsView.isHidden = type == .settings ? false : true
         
         for font in UIFont.familyNames {
             print(font)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        settingsTableView.isHidden = !(type == .settings)
+        if let view = self.view as? StartScene {
+            view.setText()
         }
     }
     
@@ -70,12 +84,25 @@ class StartViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
-    @IBAction func soundOnButton(_ sender: Any) {
-        UserDefaultsValues.soundOff = false
+    
+    func reloadData() {
+        settingsTableView.reloadData()
+    }
+    
+    func playSound() {
         if let view = self.view as! SKView? {
             guard let scene = view.scene as? StartScene else {return}
             scene.playSound()
         }
+    }
+    
+    func goToSettings() {
+        router.goToSettings()
+    }
+    
+    @IBAction func soundOnButton(_ sender: Any) {
+        UserDefaultsValues.soundOff = false
+       
     }
     @IBAction func soundOffButtonPressed(_ sender: Any) {
         UserDefaultsValues.soundOff = true

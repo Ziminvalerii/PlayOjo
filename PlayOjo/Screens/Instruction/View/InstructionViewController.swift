@@ -47,6 +47,7 @@ class InstructionViewController: BaseViewController<InstructionPresenterProtocol
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setCustomBackButton()
         if let view = self.view as! SKView? {
             if let scene = SKScene(fileNamed: "StartScene") as? StartScene {
                 scene.scaleMode = .aspectFill
@@ -92,5 +93,8 @@ class InstructionViewController: BaseViewController<InstructionPresenterProtocol
             presenter.dismissVC()
             
         }
+    }
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
 }

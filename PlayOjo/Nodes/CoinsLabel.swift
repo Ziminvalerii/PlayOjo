@@ -36,8 +36,21 @@ class CoinsLabel: SKSpriteNode {
         self.addChild(label)
     }
     
+    func animateLabel(sceneSize: CGSize, to position: CGPoint) {
+        self.position = CGPoint(x: -sceneSize.width/2, y: position.y)
+        self.run(SKAction.sequence([SKAction.wait(forDuration: 0.1), SKAction.move(to: position, duration: 1.0)]))
+    }
+    
+    func setSize(size: CGFloat) {
+        self.size = CGSize(width: size*140/24, height: 40)
+        label.setSizeWithShadow(text: "Coins: \(UserDefaultsValues.coinsCount)", size: size)
+        image.position = CGPoint(x: self.size.width/2 - image.size.width/2, y: 0)
+        let x =  -self.size.width/2 + label.frame.size.width/2 - 8
+        label.position = CGPoint(x: x, y: -label.frame.size.height/2)
+    }
+    
     func setText() {
-        let text = NSAttributedString(string: "Level \(UserDefaultsValues.coinsCount)", attributes: [.font : UIFont(name: "Arial Rounded MT Bold", size: 24)!, .foregroundColor: UIColor.green])
+        let text = NSAttributedString(string: "Coins: \(UserDefaultsValues.coinsCount)", attributes: [.font : UIFont(name: "Arial Rounded MT Bold", size: 24)!, .foregroundColor: UIColor.green])
         label.attributedText = text
     }
 }

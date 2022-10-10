@@ -14,6 +14,12 @@ extension UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: name.rawValue) as! Self
         return vc
     }
+    
+    func setCustomBackButton() {
+       // self.navigationController?.navigationBar.backItem = UIBarButtonItem(customView: UIImageView(image: UIImage(named: "backButtonTexture")))
+      //  self.navigationItem.backBarButtonItem = UIBarButtonItem(customView: UIImageView(image: UIImage(named: "backButtonTexture")))
+    }
+    
 }
 
 enum ViewControllerKeys: String {

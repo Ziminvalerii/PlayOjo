@@ -33,7 +33,7 @@ class LevelFactory {
        var bottles = [BottleNode]()
         
         let rowCount = currentLevel.flaskCount > 5 ? 2 : 1
-        let spaceBetweenY = (sceneSize.height - (220 * CGFloat(rowCount)))/(CGFloat(rowCount) + 1)
+        let spaceBetweenY = (sceneSize.height - (200 * CGFloat(rowCount)))/(CGFloat(rowCount) + 1)
         var yPos :CGFloat = -250
         var step = 0
         for j in 0 ..< rowCount {
@@ -42,8 +42,8 @@ class LevelFactory {
              flacksCount = j >= 1 ? currentLevel.flaskCount : 5
             }
             let div = (flacksCount - step)%2==0 ? 1 : 1.5
-            let spacebetween: CGFloat = (sceneSize.width - (65 * CGFloat(flacksCount - step)))/(CGFloat(flacksCount - step)+div)
-            var xPos:CGFloat = -sceneSize.width/2 + 65/2 + spacebetween
+            let spacebetween: CGFloat = (sceneSize.width - (50 * CGFloat(flacksCount - step)))/(CGFloat(flacksCount - step)+div)
+            var xPos:CGFloat = -sceneSize.width/2 + 50/2 + spacebetween
            
             for i in step ..< flacksCount {
                 let bottle = BottleNode(levelFactory: self)

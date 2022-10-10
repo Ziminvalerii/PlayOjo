@@ -25,6 +25,7 @@ class Builder: BuilderProtocol {
     
     func resolveStartViewController(router: RouterProtocol) -> StartViewController {
         let vc = StartViewController.instantiateMyViewController(name: .start)
+        vc.presenter = StartPresenter(view: vc)
         vc.router = router
         return vc
     }
@@ -37,6 +38,7 @@ class Builder: BuilderProtocol {
     
     func resolveSettingsViewController(router: RouterProtocol) -> StartViewController {
         let vc = StartViewController.instantiateMyViewController(name: .start)
+        vc.presenter = StartPresenter(view: vc)
         vc.type = .settings
         vc.router = router
         return vc

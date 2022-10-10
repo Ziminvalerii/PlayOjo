@@ -43,7 +43,7 @@ class ButtonNode: SKSpriteNode {
     convenience init(with type: ButtonTypeEnum) {
         self.init(imageNamed: type.imageNamed)
         //    self.size = CGSize(width: 300, height: 120)
-        self.zPosition = 2.0
+        self.zPosition = 12
         self.name = "button node - \(type.imageNamed)"
         self.type = type
         //   self.addChild(label)
