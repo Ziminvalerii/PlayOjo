@@ -10,7 +10,7 @@ import SpriteKit
 class InstructionButton: SKSpriteNode {
     var shouldAcceptTouches: Bool = true {
         didSet {
-            self.isUserInteractionEnabled = shouldAcceptTouches
+          //  self.isUserInteractionEnabled = shouldAcceptTouches
         }
     }
     var delegate: Dependable {

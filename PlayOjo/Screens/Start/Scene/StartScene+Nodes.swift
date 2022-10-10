@@ -26,20 +26,22 @@ extension StartScene {
     }
     
     func configureButtons(node: SKNode) {
-        instruction.position = CGPoint(x: -self.size.width/2 + instruction.size.width/2 + 16, y: self.size.height/2 - instruction.size.height/2 - 40)
-        settingsButton.position = CGPoint(x: self.size.width/2 - settingsButton.size.width/2 - 16, y: instruction.position.y)
-        coinsLabel.position = CGPoint(x: 0, y: instruction.position.y)
+     //   instruction.position = CGPoint(x: -self.size.width/2 + instruction.size.width/2 + 16, y: self.size.height/2 - instruction.size.height/2 - 40)
+    //    settingsButton.position = CGPoint(x: self.size.width/2 - settingsButton.size.width/2 - 16, y: instruction.position.y)
+    //    instruction.isUserInteractionEnabled = true
+    //    settingsButton.isUserInteractionEnabled = true
+        coinsLabel.position = CGPoint(x: 0, y:  self.size.height/2 - coinsLabel.size.height - 64)
         levelLabel.position = CGPoint(x: 0, y: coinsLabel.position.y - 64)
         coinsLabel.setSize(size: 32)
         touchable.append(playButton)
-        touchable.append(instruction)
-        touchable.append(settingsButton)
+      //  touchable.append(instruction)
+      //  touchable.append(settingsButton)
         self.addChild(playButton)
-        self.addChild(instruction)
-        self.addChild(settingsButton)
+    //    self.addChild(instruction)
+    //    self.addChild(settingsButton)
         self.addChild(coinsLabel)
         self.addChild(levelLabel)
-        coinsLabel.animateLabel(sceneSize: self.size, to: CGPoint(x: 0, y: instruction.position.y - 64))
+        coinsLabel.animateLabel(sceneSize: self.size, to: CGPoint(x: 0, y: self.size.height/2 - coinsLabel.size.height - 64))
         levelLabel.animateLabel(sceneSize: self.size, to: CGPoint(x: 0, y: coinsLabel.position.y - 64))
     }
     

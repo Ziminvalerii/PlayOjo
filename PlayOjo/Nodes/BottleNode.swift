@@ -10,7 +10,7 @@ import SpriteKit
 class BottleNode: SKSpriteNode {
     var shouldAcceptTouches: Bool = true {
         didSet {
-            self.isUserInteractionEnabled = shouldAcceptTouches
+            //self.isUserInteractionEnabled = shouldAcceptTouches
         }
     }
     var levelFactory: LevelFactory!
@@ -63,6 +63,20 @@ class BottleNode: SKSpriteNode {
         }
     }
     
+    func setUserInteractiveEnabled() {
+        guard let scene = self.scene else {return}
+        scene.enumerateChildNodes(withName: "bottle") { node, error in
+            node.isUserInteractionEnabled = true
+        }
+    }
+    
+    func setUserInteractiveDisenabled() {
+        guard let scene = self.scene else {return}
+        scene.enumerateChildNodes(withName: "bottle") { node, error in
+            node.isUserInteractionEnabled = false
+        }
+    }
+    
     func createBorder(ground: Bool) -> SKSpriteNode {
         let border = SKSpriteNode(color: .clear, size: CGSize(width: ground ? self.size.width : 1.0, height: ground ? 1 : self.size.height))
         border.physicsBody = SKPhysicsBody(rectangleOf: border.size)
@@ -96,6 +110,7 @@ extension BottleNode: ButtonType {
         if containsTouches(touches: touches, scene: scene, node: foregrounNode) {
             if ((scene.selectedBuble?.type == bubbles.last?.type && scene.selectedBuble?.currentBottle != self) || bubbles.isEmpty)  && bubbles.count < 4 {
                 print("place ball")
+                self.setUserInteractiveDisenabled()
                 self.levelFactory.prevous.append(scene.selectedBuble!)
                 scene.selectedBuble?.placeBuble(to: self, completion: {
                     if scene.selectedBuble?.currentBottle == self {
@@ -104,6 +119,7 @@ extension BottleNode: ButtonType {
                     self.checkPossibility()
                     self.checkIfOneBottleSorted()
                     self.checkIfBottleSorted()
+                    self.setUserInteractiveEnabled()
                 })
             } else if scene.selectedBuble == nil || scene.selectedBuble?.type != bubbles.last?.type {
                 print("select ball")

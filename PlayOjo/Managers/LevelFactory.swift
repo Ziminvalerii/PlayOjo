@@ -22,7 +22,7 @@ class LevelFactory {
     init(sceneSize: CGSize) {
         self.sceneSize = sceneSize
         self.flacons = createFlacons()
-   //     UserDefaultsValues.levelIndex = 10
+        UserDefaultsValues.levelIndex = 10
         currentLevel = levels[UserDefaultsValues.levelIndex]
     }
     
@@ -35,7 +35,7 @@ class LevelFactory {
         
         let rowCount = currentLevel.flaskCount > 5 ? 2 : 1
         let spaceBetweenY = (sceneSize.height - (200 * CGFloat(rowCount)))/(CGFloat(rowCount) + 1)
-        var yPos :CGFloat = -250
+        var yPos :CGFloat = -225
         var step = 0
         for j in 0 ..< rowCount {
             var flacksCount = currentLevel.flaskCount
@@ -55,7 +55,7 @@ class LevelFactory {
                 bottles.append(bottle)
             }
             step += 5
-            yPos = 50
+            yPos = 25
            
         }
         return bottles

@@ -28,6 +28,8 @@ class MenuButtonNode: SKSpriteNode {
     }
     
     
+    
+    
 }
 
 extension MenuButtonNode: ButtonType {

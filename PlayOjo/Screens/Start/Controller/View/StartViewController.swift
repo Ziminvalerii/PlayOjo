@@ -16,13 +16,7 @@ enum ControllerType {
 class StartViewController: BaseViewController<StartPresenterProtocol>, StartViewProtocol {
     var type: ControllerType = .start
     var router: RouterProtocol!
-    @IBOutlet weak var settingsView: UIView!
-    @IBOutlet weak var sliderView: UISlider! {
-        didSet {
-            sliderView.setThumbImage(UIImage(named: "thumbImage")!, for: .normal)
-            sliderView.value = UserDefaultsValues.brightness
-        }
-    }
+   
     @IBOutlet weak var settingsTableView: UITableView! {
         didSet {
            
@@ -30,20 +24,13 @@ class StartViewController: BaseViewController<StartPresenterProtocol>, StartView
             settingsTableView.dataSource = presenter
         }
     }
-    @IBOutlet weak var brightnessLabel: UILabel! {
-        didSet {
-            brightnessLabel.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).cgColor
-            brightnessLabel.layer.shadowOffset = CGSize(width: 4, height: 4)
-            brightnessLabel.layer.shadowRadius = 4
-            brightnessLabel.layer.shadowOpacity = 1.0
-            brightnessLabel.layer.bounds = brightnessLabel.bounds
-            brightnessLabel.layer.position = brightnessLabel.center
-        }
-    }
+    @IBOutlet weak var instructionButton: UIButton!
+    @IBOutlet weak var settingsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.backButtonTitle = nil
+        
         setCustomBackButton()
         if let view = self.view as! SKView? {
             if let scene = SKScene(fileNamed: "StartScene") as? StartScene {
@@ -64,9 +51,17 @@ class StartViewController: BaseViewController<StartPresenterProtocol>, StartView
     
     override func viewWillAppear(_ animated: Bool) {
         settingsTableView.isHidden = !(type == .settings)
+        self.navigationController?.setNavigationBarHidden(type == .start, animated: false)
+        instructionButton.isHidden = !(type == .start)
+        settingsButton.isHidden = !(type == .start)
         if let view = self.view as? StartScene {
             view.setText()
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     override var shouldAutorotate: Bool {
@@ -100,37 +95,11 @@ class StartViewController: BaseViewController<StartPresenterProtocol>, StartView
         router.goToSettings()
     }
     
-    @IBAction func soundOnButton(_ sender: Any) {
-       // UserDefaultsValues.soundOff = false
-       
+    @IBAction func instructionButtonPressed(_ sender: Any) {
+        goToInstruction()
     }
-    @IBAction func soundOffButtonPressed(_ sender: Any) {
-       // UserDefaultsValues.soundOff = true
-        
-    }
-    @IBAction func musicButtonPressed(_ sender: Any) {
-        
-//        UserDefaultsValues.musicOff = false
-//        if !UserDefaultsValues.musicOff {
-//            playBackgroundMusic()
-//        }
-    }
-    @IBAction func musicOffButtonPressed(_ sender: Any) {
-//        UserDefaultsValues.musicOff = true
-//        if UserDefaultsValues.musicOff {
-//            stopPlaying()
-//        }
-    }
-    @IBAction func vibrationOnButtonPressed(_ sender: Any) {
-       // UserDefaultsValues.vibrationOff = false
-     //   playVibration()
-    }
-    @IBAction func vibrationOffButtonPressed(_ sender: Any) {
-      //  UserDefaultsValues.vibrationOff = true
-    }
-    @IBAction func sliderValueChanged(_ sender: Any) {
-        //UserDefaultsValues.brightness = Float(sliderView.value)
-      //  UIScreen.main.brightness = CGFloat(UserDefaultsValues.brightness)
+    @IBAction func settingsButtonPressed(_ sender: Any) {
+        goToSettings()
     }
     
     func goToGameVC() {

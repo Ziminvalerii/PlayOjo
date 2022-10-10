@@ -10,7 +10,7 @@ import SpriteKit
 class UndoButton: SKSpriteNode {
     var shouldAcceptTouches: Bool = true {
         didSet {
-            self.isUserInteractionEnabled = shouldAcceptTouches
+            //self.isUserInteractionEnabled = shouldAcceptTouches
         }
     }
     var freeUndoActions: Int = 2 {
@@ -52,7 +52,7 @@ class UndoButton: SKSpriteNode {
     convenience init(levelFactory: LevelFactory) {
         self.init(imageNamed: "iconButtonTexture")
         self.zPosition = 8
-        self.size = CGSize(width: 70, height: 40)
+        self.size = CGSize(width: 70, height: 45)
         self.name = "undo button node"
         label.position = CGPoint(x: self.frame.minX + 16, y: -label.frame.size.height/4)
         icon.position = CGPoint(x: label.frame.maxX + icon.size.width/2 + 4, y: -label.frame.size.height/4 + icon.size.height/2)

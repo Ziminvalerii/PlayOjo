@@ -42,7 +42,7 @@ class CoinsLabel: SKSpriteNode {
     }
     
     func setSize(size: CGFloat) {
-        self.size = CGSize(width: size*140/24, height: 40)
+        self.size = CGSize(width: size*138/24, height: 40)
         label.setSizeWithShadow(text: "Coins: \(UserDefaultsValues.coinsCount)", size: size)
         image.position = CGPoint(x: self.size.width/2 - image.size.width/2, y: 0)
         let x =  -self.size.width/2 + label.frame.size.width/2 - 8
