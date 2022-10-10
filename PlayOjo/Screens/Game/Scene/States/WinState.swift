@@ -25,7 +25,7 @@ class WinState: GKState {
         gameSceneManager.toucheble.append(winOverlay.nextButton)
         gameSceneManager.updatable.append(winOverlay)
         winOverlay.applyCoinsFallAction()
-        if UserDefaultsValues.levelIndex > gameSceneManager.levelFactory.levels.count-1 {
+        if UserDefaultsValues.levelIndex >= gameSceneManager.levelFactory.levels.count-1 {
             UserDefaultsValues.levelIndex = 0
         } else {
         UserDefaultsValues.levelIndex += 1

@@ -26,7 +26,7 @@ extension StartScene {
     }
     
     func configureButtons(node: SKNode) {
-        instruction.position = CGPoint(x: -self.size.width/2 + instruction.size.width/2 + 16, y: self.size.height/2 - instruction.size.height/2 - 32)
+        instruction.position = CGPoint(x: -self.size.width/2 + instruction.size.width/2 + 16, y: self.size.height/2 - instruction.size.height/2 - 40)
         settingsButton.position = CGPoint(x: self.size.width/2 - settingsButton.size.width/2 - 16, y: instruction.position.y)
         coinsLabel.position = CGPoint(x: 0, y: instruction.position.y)
         levelLabel.position = CGPoint(x: 0, y: coinsLabel.position.y - 64)

@@ -21,7 +21,7 @@ class BottleNode: SKSpriteNode {
         }
         return delegate
     }
-    
+    private var start: Bool = false
     
     lazy var collectSound = SKAction.playSoundFileNamed("collect.wav", waitForCompletion: false)
     lazy var fallSound = SKAction.playSoundFileNamed("fall.wav", waitForCompletion: false)
@@ -74,12 +74,14 @@ class BottleNode: SKSpriteNode {
     
     func applyBubleAction() {
         guard let scene = self.scene else {return}
-        var i = 0
-        scene.run(SKAction.repeat(SKAction.sequence([SKAction.wait(forDuration: 1.0), SKAction.run {
+        var i =  0
+        start = true
+        let action = SKAction.repeat(SKAction.sequence([SKAction.wait(forDuration: 1.0), SKAction.run {
             scene.addChild(self.bubbles[i])
             i+=1
             self.playFallSound(scene) //playSound(scene)
-        }]), count: bubbles.count))
+        }]), count: bubbles.count)
+        scene.run(SKAction.sequence([action, SKAction.run({self.start = false})]))
     }
 }
 
@@ -88,6 +90,9 @@ extension BottleNode: ButtonType {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let scene = scene as? GameScene else {return}
+        if start {
+            return
+        }
         if containsTouches(touches: touches, scene: scene, node: foregrounNode) {
             if ((scene.selectedBuble?.type == bubbles.last?.type && scene.selectedBuble?.currentBottle != self) || bubbles.isEmpty)  && bubbles.count < 4 {
                 print("place ball")

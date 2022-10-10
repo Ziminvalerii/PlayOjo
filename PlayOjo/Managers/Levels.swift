@@ -58,10 +58,10 @@ enum Levels: CaseIterable {
     case ninth
     case tenth
     case eleventh
-    case twelve
-    case thirteen
-    case fourteen
-    case fifteen
+//    case twelve
+//    case thirteen
+//    case fourteen
+//    case fifteen
     
     var flaskCount: Int {
         return bublesInFlaks.count
@@ -180,14 +180,14 @@ enum Levels: CaseIterable {
                     (7, [BubleTextures]()),
                     (8, [BubleTextures]()),
             ]
-        case .twelve:
-            return [(Int, [BubleTextures])]()
-        case .thirteen:
-            return [(Int, [BubleTextures])]()
-        case .fourteen:
-            return [(Int, [BubleTextures])]()
-        case .fifteen:
-            return [(Int, [BubleTextures])]()
+//        case .twelve:
+//            return [(Int, [BubleTextures])]()
+//        case .thirteen:
+//            return [(Int, [BubleTextures])]()
+//        case .fourteen:
+//            return [(Int, [BubleTextures])]()
+//        case .fifteen:
+//            return [(Int, [BubleTextures])]()
         }
     }
 }

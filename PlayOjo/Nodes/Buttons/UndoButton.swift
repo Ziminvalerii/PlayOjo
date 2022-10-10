@@ -37,14 +37,14 @@ class UndoButton: SKSpriteNode {
         let text = NSAttributedString(string: "2", attributes: [.font : UIFont(name: "Arial", size: 16)!, .foregroundColor: UIColor.white])
         var label = SKLabelNode(attributedText: text)
         label.numberOfLines = 6
-      //  label.zPosition = 8
+        label.zPosition = 1
         label.name = "undo  label node"
         return label
     }()
     var icon: SKSpriteNode = {
         let node = SKSpriteNode(imageNamed: "undoIcon")
         node.size = CGSize(width: 20, height: 20)
-    //    node.zPosition = 8
+        node.zPosition = 1
         node.name = "undo icon node"
         return node
     }()

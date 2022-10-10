@@ -82,6 +82,7 @@
 		D1FB257928F0E4C8001D3864 /* StartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FB257828F0E4C8001D3864 /* StartModel.swift */; };
 		D1FB257B28F303E0001D3864 /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FB257A28F303E0001D3864 /* Range.swift */; };
 		D1FB257D28F33109001D3864 /* LevelLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FB257C28F33109001D3864 /* LevelLabel.swift */; };
+		D1FB257F28F41A29001D3864 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FB257E28F41A29001D3864 /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +188,7 @@
 		D1FB257828F0E4C8001D3864 /* StartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartModel.swift; sourceTree = "<group>"; };
 		D1FB257A28F303E0001D3864 /* Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Range.swift; sourceTree = "<group>"; };
 		D1FB257C28F33109001D3864 /* LevelLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelLabel.swift; sourceTree = "<group>"; };
+		D1FB257E28F41A29001D3864 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		DC85B7AD77CA455B85DAE543 /* Pods-PlayOjo-PlayOjoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayOjo-PlayOjoUITests.debug.xcconfig"; path = "Target Support Files/Pods-PlayOjo-PlayOjoUITests/Pods-PlayOjo-PlayOjoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -543,6 +545,7 @@
 				D13C586D28EE0336003FFDE0 /* SKSpriteNode.swift */,
 				D1E8609728EF1F9C00662567 /* SKLabelNode.swift */,
 				D1FB257A28F303E0001D3864 /* Range.swift */,
+				D1FB257E28F41A29001D3864 /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -913,6 +916,7 @@
 				D1FB257D28F33109001D3864 /* LevelLabel.swift in Sources */,
 				D14072D828E84229006C504D /* ShopCollectionViewCell.swift in Sources */,
 				D105224728EC453B007D7A24 /* AdManager.swift in Sources */,
+				D1FB257F28F41A29001D3864 /* UIImage.swift in Sources */,
 				D1E8609828EF1F9C00662567 /* SKLabelNode.swift in Sources */,
 				D14072CC28E79F21006C504D /* WinOverlay.swift in Sources */,
 				D13C586E28EE0337003FFDE0 /* SKSpriteNode.swift in Sources */,

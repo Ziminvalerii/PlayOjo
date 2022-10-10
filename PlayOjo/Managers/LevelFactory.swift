@@ -22,6 +22,7 @@ class LevelFactory {
     init(sceneSize: CGSize) {
         self.sceneSize = sceneSize
         self.flacons = createFlacons()
+   //     UserDefaultsValues.levelIndex = 10
         currentLevel = levels[UserDefaultsValues.levelIndex]
     }
     

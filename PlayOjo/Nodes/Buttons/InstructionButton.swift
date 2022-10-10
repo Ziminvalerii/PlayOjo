@@ -22,7 +22,7 @@ class InstructionButton: SKSpriteNode {
     
     convenience init() {
         self.init(imageNamed: "infoButtonTexture")
-        self.size = CGSize(width: 35, height: 35)
+        self.size = CGSize(width: 45, height: 45)
         self.zPosition = 21
         self.name = "info button"
     }

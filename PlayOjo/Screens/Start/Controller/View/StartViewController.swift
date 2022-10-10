@@ -101,36 +101,36 @@ class StartViewController: BaseViewController<StartPresenterProtocol>, StartView
     }
     
     @IBAction func soundOnButton(_ sender: Any) {
-        UserDefaultsValues.soundOff = false
+       // UserDefaultsValues.soundOff = false
        
     }
     @IBAction func soundOffButtonPressed(_ sender: Any) {
-        UserDefaultsValues.soundOff = true
+       // UserDefaultsValues.soundOff = true
         
     }
     @IBAction func musicButtonPressed(_ sender: Any) {
         
-        UserDefaultsValues.musicOff = false
-        if !UserDefaultsValues.musicOff {
-            playBackgroundMusic()
-        }
+//        UserDefaultsValues.musicOff = false
+//        if !UserDefaultsValues.musicOff {
+//            playBackgroundMusic()
+//        }
     }
     @IBAction func musicOffButtonPressed(_ sender: Any) {
-        UserDefaultsValues.musicOff = true
-        if UserDefaultsValues.musicOff {
-            stopPlaying()
-        }
+//        UserDefaultsValues.musicOff = true
+//        if UserDefaultsValues.musicOff {
+//            stopPlaying()
+//        }
     }
     @IBAction func vibrationOnButtonPressed(_ sender: Any) {
-        UserDefaultsValues.vibrationOff = false
-        playVibration()
+       // UserDefaultsValues.vibrationOff = false
+     //   playVibration()
     }
     @IBAction func vibrationOffButtonPressed(_ sender: Any) {
-        UserDefaultsValues.vibrationOff = true
+      //  UserDefaultsValues.vibrationOff = true
     }
     @IBAction func sliderValueChanged(_ sender: Any) {
-        UserDefaultsValues.brightness = Float(sliderView.value)
-        UIScreen.main.brightness = CGFloat(UserDefaultsValues.brightness)
+        //UserDefaultsValues.brightness = Float(sliderView.value)
+      //  UIScreen.main.brightness = CGFloat(UserDefaultsValues.brightness)
     }
     
     func goToGameVC() {

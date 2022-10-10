@@ -30,7 +30,7 @@ class StartPresenter: NSObject, StartPresenterProtocol {
     func createSwitch(tag: Int, isOn: Bool) -> UISwitch {
         let cellSwitch = UISwitch(frame: .zero)
         cellSwitch.tintColor = UIColor.purple
-        cellSwitch.onTintColor = UIColor.green
+        cellSwitch.onTintColor = UIColor(named: "textColor")!
         cellSwitch.backgroundColor = .clear
         cellSwitch.tag = tag
         cellSwitch.isOn = isOn
@@ -101,6 +101,6 @@ extension StartPresenter {
     }
     
     func setAtrributedString(text: String, fontSize: CGFloat) -> NSAttributedString {
-        return NSAttributedString(string: text, attributes: [.font : UIFont(name: "Arial Rounded MT Bold", size: 17.0)!, .foregroundColor: UIColor.green])
+        return NSAttributedString(string: text, attributes: [.font : UIFont(name: "Arial Rounded MT Bold", size: 17.0)!, .foregroundColor: UIColor(named: "textColor")!])
     }
 }

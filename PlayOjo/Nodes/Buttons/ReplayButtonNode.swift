@@ -24,7 +24,7 @@ class ReplayButtonNode: SKSpriteNode {
     
     convenience init() {
         self.init(imageNamed: "replayButtonTexture")
-        self.size =  CGSize(width: 35, height: 35)
+        self.size =  CGSize(width: 45, height: 45)
         self.zPosition = 8
         self.name = "replay button node"
         //self.addGlow()
